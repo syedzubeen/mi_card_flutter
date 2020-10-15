@@ -1,60 +1,43 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    Myapp()
-  );
+  runApp(Myapp());
 }
+
 class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
-        body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: 100.0,
-                color: Colors.red,
-                height: double.infinity,
-              ),
-              SizedBox(
-                width: 46.0,
-              ),
-              Container(
-
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.green,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 46.0,
-              ),
-
-              Container(
-
-                width: 100.0,
-                color: Colors.blue,
-                height: double.infinity,
-              ),
-            ],
-          ),
-        )
-      ),
+          backgroundColor: Colors.teal,
+          body: SafeArea(
+            child: Column(
+             children: [
+               CircleAvatar(
+                 radius: 50,
+                 backgroundImage: AssetImage('images/zubeen.PNG'),
+               ),
+               Text(
+                 'Syed Zubeen',
+                 style: TextStyle(
+                   fontSize: 40.0,
+                   fontWeight: FontWeight.bold,
+                   color: Colors.white,
+                   fontFamily: 'Pacifico',
+                 ),
+               ),
+               Text(
+                 'Software Engineer',
+                 style: TextStyle(
+                   fontSize: 17.0,
+                   letterSpacing: 2.5,
+                   fontWeight: FontWeight.bold,
+                   color: Colors.white,
+                 ),
+               )
+             ],
+            ),
+          )),
     );
   }
 }
